@@ -2,7 +2,7 @@
 
 var mongoose = require('mongoose');
 var app = require('./app')
-var port = 'https://tecnopac-back-end.vercel.app/'
+var port = 3800
 require('dotenv').config();
 
 //conexion database
