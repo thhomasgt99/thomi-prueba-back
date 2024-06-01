@@ -2,11 +2,12 @@
 
 var mongoose = require('mongoose');
 var app = require('./app')
-var port = 3800
+var port = 'https://tecnopac-back-end.vercel.app/'
+require('dotenv').config();
 
 //conexion database
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/tecnopac')
+mongoose.connect(process.env.MONGODB_URL)
 	.then(()=>{
 		console.log("La conexion a la base de datos se ha realizado correctamente")
 
