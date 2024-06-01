@@ -8,7 +8,7 @@
 	"routes": [
 		{
 			"source": "/(.*)",
-			"destination": "/api"
+			"destination": "/"
 		}
 	]
 }
