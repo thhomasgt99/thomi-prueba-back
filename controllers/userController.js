@@ -13,7 +13,7 @@ function saveUser(req, res) {
 	var params = req.body
 	const newUser = new User()
 
-	if (params.name && params.user_role && params.status && params.social_profile && params.promote && params.rating && params.last_login && params.created_at) {
+	if (params.name && params.user_role && params.status && params.social_profile && params.promote && params.rating && params.last_login) {
 		newUser.name = params.name
 		newUser.user_role = params.user_role
 		newUser.status = params.status
@@ -21,7 +21,7 @@ function saveUser(req, res) {
 		newUser.promote = params.promote
 		newUser.rating = params.rating
 		newUser.last_login = params.last_login
-		newUser.created_at = params.created_at
+		// newUser.created_at = params.created_at
 	}
 
 	User.find()
