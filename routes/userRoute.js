@@ -13,5 +13,6 @@ api.get('/getusers', user.getUsers)
 api.post('/register', user.saveUser)
 api.put('/register/:id', user.putUser)
 api.delete('/register/:id', user.deleteUser)
+api.delete('/register', user.deleteAlll)
 
 module.exports = api

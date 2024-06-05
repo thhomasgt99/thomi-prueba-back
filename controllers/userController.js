@@ -89,10 +89,17 @@ async function deleteUser(req, res){
 	}
 }
 
+async function deleteAlll(req, res){
+	const resultado =await User.deleteMany({})
+	
+	res.status(200).send({message: resultado})
+}
+
 module.exports = {
 	prueba,
 	saveUser,
 	getUsers,
 	putUser,
 	deleteUser,
+	deleteAlll,
 }
