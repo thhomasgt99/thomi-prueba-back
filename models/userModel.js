@@ -6,7 +6,7 @@ var Schema = mongoose.Schema
 var	UserSchema = Schema({
 	name:String,
 	user_role:String,
-	status:String,
+	status:Boolean,
 	social_profile:Array,
 	promote:String,
 	rating:Number,
