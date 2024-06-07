@@ -8,7 +8,7 @@ var	UserSchema = Schema({
 	user_role:String,
 	status:Boolean,
 	social_profile:Array,
-	promote:String,
+	promote:Boolean,
 	rating:Number,
 	last_login:String,
 	created_at:String,

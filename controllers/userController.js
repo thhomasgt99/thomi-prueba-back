@@ -13,7 +13,7 @@ function saveUser(req, res) {
 	var params = req.body
 	const newUser = new User()
 
-	if (params.name && params.user_role && params.social_profile && params.promote && params.rating && params.last_login) {
+	if (params.name && params.user_role && params.social_profile  && params.rating && params.last_login) {
 		newUser.name = params.name
 		newUser.user_role = params.user_role
 		newUser.status = params.status
