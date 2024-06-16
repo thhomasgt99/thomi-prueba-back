@@ -1,6 +1,5 @@
-'use strict'
-
-var mongoose = require('mongoose')
+// var mongoose = require('mongoose')
+import mongoose from 'mongoose'
 var Schema = mongoose.Schema
 
 var	UserSchema = Schema({
@@ -14,4 +13,5 @@ var	UserSchema = Schema({
 	created_at:String,
 })
 
-module.exports = mongoose.model('User', UserSchema)
+const User = mongoose.model('User', UserSchema)
+export default User;

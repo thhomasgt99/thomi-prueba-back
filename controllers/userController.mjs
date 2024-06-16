@@ -1,15 +1,14 @@
-'use strict'
-
-var User = require('../models/userModel')
+// var User = require('../models/userModel')
+import User from '../models/userModel.mjs'
 
 //Metodos de prueba
-function prueba(req, res) {
+export function prueba(req, res) {
 	res.status(200).send({
 		message: 'hola mundo desde Node'
 	})
 }
 
-function saveUser(req, res) {
+export function saveUser(req, res) {
 	var params = req.body
 	const newUser = new User()
 
@@ -45,7 +44,7 @@ function saveUser(req, res) {
 
 }
 
-function getUsers(rep, res) {
+export function getUsers(rep, res) {
 	User.find()
 		.then((usuarios) => {
 			console.log('Lista de usuarios:', usuarios);
@@ -56,7 +55,7 @@ function getUsers(rep, res) {
 		});
 }
 
-async function putUser(req, res) {
+export async function putUser(req, res) {
 	var userName = await req.params.id
 	var updateUser = await req.body
 	
@@ -75,7 +74,7 @@ async function putUser(req, res) {
   .catch(err => console.error('Error al actualizar el documento:', err))
 }
 
-async function deleteUser(req, res){
+export async function deleteUser(req, res){
 	var userName = await req.params.id
 
 	const filtro = {name: userName}
@@ -89,17 +88,8 @@ async function deleteUser(req, res){
 	}
 }
 
-async function deleteAll(req, res){
+export async function deleteAll(req, res){
 	const resultado =await User.deleteMany({})
 	
 	res.status(200).send({message: resultado})
-}
-
-module.exports = {
-	prueba,
-	saveUser,
-	getUsers,
-	putUser,
-	deleteUser,
-	deleteAll,
 }
