@@ -9,7 +9,7 @@ import dotenv from 'dotenv'
 dotenv.config
 //conexion database
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/tecnopac')
+mongoose.connect('mongodb+srv://thhomasgt99:lPSWgHFfHqt7fkGu@cluster0.tykp5qz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 	.then(()=>{
 		console.log("La conexion a la base de datos se ha realizado correctamente")
 
